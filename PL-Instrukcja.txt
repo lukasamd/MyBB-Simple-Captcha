@@ -1,0 +1,170 @@
+#############################################
+
+/**
+ *
+ * @author Lukasz "LukasAMD" Tkacz
+ *
+ * @package Simple Captcha
+ * @version 2.8.1
+ * @copyright (c) Lukasz Tkacz
+ * @license Based on CC BY-NC-SA 3.0 with special clause
+ *
+ */
+
+#############################################
+
+
+
+
+
+INSTALACJA:
+
+
+1. Umieścić pliki z katalogu root na serwerze
+
+2. Zalogować się jako admin i aktywować plugin "Ulepszony antyspam"  
+
+3. Wyłącz opcję "Obrazki CAPTCHA przy rejestracji i postowaniu" in ACP -> Konfiguracja -> Ustawienia ogólne
+
+4. Opcjonalnie edytować pliki dla pełnej funkcjonalności,
+   lub podmienić na pliki z katalogu contrib/root
+   
+
+
+*******************************************************
+*******************************************************
+PLIK:   member.php
+*******************************************************
+
+
+ZNAJDŹ (linia ~1074):
+-------------------------------------------------------
+if(!empty($errors))
+
+
+DODAJ PRZED NIM:
+-------------------------------------------------------
+// START - Simple Captcha MOD
+if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['simpleCaptcha']))
+{
+  $plugins->objects['simpleCaptcha']->checkLogin(); 
+}
+// END - Simple Captcha MOD  
+    
+    
+ZNAJDŹ (linia ~1144):
+-------------------------------------------------------
+$username = "";
+$password = "";
+	
+	
+DODAJ PRZED NIM:
+-------------------------------------------------------
+// START - Simple Captcha MOD
+if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['simpleCaptcha']))
+{
+  $plugins->objects['simpleCaptcha']->generateLogin(); 
+}
+// END - Simple Captcha MOD    
+  
+
+  
+  
+*******************************************************  
+*******************************************************
+PLIK:   newreply.php
+*******************************************************
+
+
+ZNAJDŹ (linia ~489):
+-------------------------------------------------------
+// One or more errors returned, fetch error list and throw to newreply page
+  
+  
+DODAJ PRZED NIM:
+-------------------------------------------------------
+// START - Simple Captcha MOD
+if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['simpleCaptcha']))
+{
+  $plugins->objects['simpleCaptcha']->checkNewPost(); 
+}
+// END - Simple Captcha MOD
+    
+  
+ZNAJDŹ (linia ~1082):
+-------------------------------------------------------
+if($mybb->settings['threadreview'] != 0)
+
+  
+DODAJ PRZED NIM:
+-------------------------------------------------------
+// START - Simple Captcha MOD
+if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['simpleCaptcha']))
+{
+  $plugins->objects['simpleCaptcha']->generateNewPost(); 
+}
+// END - Simple Captcha MOD
+  
+  
+  
+  
+*******************************************************  
+*******************************************************
+PLIK:   newthread.php
+*******************************************************
+
+
+ZNAJDŹ (linia ~388):
+-------------------------------------------------------
+  // One or more errors returned, fetch error list and throw to newthread page
+  
+  
+DODAJ PRZED NIM:
+-------------------------------------------------------
+// START - Simple Captcha MOD
+if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['simpleCaptcha']))
+{
+  $plugins->objects['simpleCaptcha']->checkNewPost(); 
+}
+// END - Simple Captcha MOD
+  
+  
+ZNAJDŹ (linia ~922):
+-------------------------------------------------------
+if($forumpermissions['canpostpolls'] != 0)
+
+
+DODAJ PRZED NIM:
+-------------------------------------------------------
+// START - Simple Captcha MOD
+if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['simpleCaptcha']))
+{
+  $plugins->objects['simpleCaptcha']->generateNewPost(); 
+}
+// END - Simple Captcha MOD
+
+
+
+
+*******************************************************
+*******************************************************
+PLIK:   showthread.php
+*******************************************************
+
+
+ZNAJDŹ (linia ~1088):
+-------------------------------------------------------
+if($mybb->user['signature'])
+
+
+DODAJ PRZED NIM:
+-------------------------------------------------------	
+// START - Simple Captcha MOD
+if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['simpleCaptcha']))
+{
+  $plugins->objects['simpleCaptcha']->generateNewPost(); 
+}
+// END - Simple Captcha MOD 
+  
+  
+  
