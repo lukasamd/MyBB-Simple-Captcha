@@ -1,14 +1,22 @@
 <?php
 /**
+ * This file is part of Simple Captcha plugin for MyBB.
+ * Copyright (C) 2010-2013 Lukasz Tkacz <lukasamd@gmail.com>
  *
- * @author Lukasz "LukasAMD" Tkacz
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- * @package Simple Captcha
- * @version 2.8.1
- * @copyright (c) Lukasz Tkacz
- * @license Based on CC BY-NC-SA 3.0 with special clause
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
  *
- */
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */ 
 
 /**
  * Disallow direct access to this file for security reasons
@@ -48,7 +56,7 @@ function simpleCaptcha_info()
         'website' => 'http://lukasztkacz.com',
         'author' => 'Lukasz "LukasAMD" Tkacz',
         'authorsite' => 'http://lukasztkacz.com',
-        'version' => '2.0.1',
+        'version' => '2.9',
         'guid' => '5cac17cbd737eccb755d614a60fe19a0',
         'compatibility' => '16*'
     );

@@ -1,15 +1,22 @@
 <?php
 /**
+ * This file is part of Simple Captcha plugin for MyBB.
+ * Copyright (C) 2010-2013 Lukasz Tkacz <lukasamd@gmail.com>
  *
- * @author Lukasz "LukasAMD" Tkacz
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- * @package Simple Captcha
- * @version 2.8.1
- * @copyright (c) Lukasz Tkacz
- * @license Based on CC BY-NC-SA 3.0 with special clause
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
  *
- */
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */ 
 
 $l['simpleCaptchaName'] = 'Ulepszony antyspam';
 $l['simpleCaptchaDesc'] = 'Ten plugin wprowadza zmienony mechanizm potwierdzenia wizualnego, trudny dla botów spamujących.';
-?>
