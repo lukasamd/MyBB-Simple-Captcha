@@ -1,7 +1,7 @@
 <?php
 /**
  * This file is part of Simple Captcha plugin for MyBB.
- * Copyright (C) 2010-2013 Lukasz Tkacz <lukasamd@gmail.com>
+ * Copyright (C) 2010-2014 Lukasz Tkacz <lukasamd@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -56,7 +56,7 @@ function simpleCaptcha_info()
         'website' => 'http://lukasztkacz.com',
         'author' => 'Lukasz "LukasAMD" Tkacz',
         'authorsite' => 'http://lukasztkacz.com',
-        'version' => '2.9',
+        'version' => '2.10',
         'guid' => '5cac17cbd737eccb755d614a60fe19a0',
         'compatibility' => '16*'
     );

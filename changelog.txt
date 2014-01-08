@@ -1,3 +1,9 @@
+Version 2.10
+    * code cleanup
+	* update readme
+
+
+
 Version 2.9
     * change license to LGPL v3
     * update readme to MyBB 1.6.10

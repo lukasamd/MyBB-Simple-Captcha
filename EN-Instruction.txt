@@ -2,7 +2,7 @@
 
 /**
  * This file is part of Simple Captcha plugin for MyBB.
- * Copyright (C) 2010-2013 Lukasz Tkacz <lukasamd@gmail.com>
+ * Copyright (C) 2010-2014 Lukasz Tkacz <lukasamd@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -44,7 +44,7 @@ FILE:   member.php
 *******************************************************
 
 
-FIND (line ~1221):
+FIND:
 -------------------------------------------------------
 if(!empty($errors))
 
@@ -59,7 +59,7 @@ if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['si
 // END - Simple Captcha MOD  
     
     
-FIND (line ~1348):
+FIND:
 -------------------------------------------------------
 $username = "";
 $password = "";
@@ -83,7 +83,7 @@ FILE:   newreply.php
 *******************************************************
 
 
-FIND (line ~469):
+FIND:
 -------------------------------------------------------
 // One or more errors returned, fetch error list and throw to newreply page
   
@@ -98,7 +98,7 @@ if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['si
 // END - Simple Captcha MOD
     
   
-FIND (line ~1100):
+FIND:
 -------------------------------------------------------
 if($mybb->settings['threadreview'] != 0)
 
@@ -121,7 +121,7 @@ FILE:   newthread.php
 *******************************************************
 
 
-FIND (line ~355):
+FIND:
 -------------------------------------------------------
 // One or more errors returned, fetch error list and throw to newthread page
   
@@ -136,7 +136,7 @@ if (isset($plugins->objects['simpleCaptcha']) && is_object($plugins->objects['si
 // END - Simple Captcha MOD
   
   
-FIND (line ~900):
+FIND:
 -------------------------------------------------------
 if($forumpermissions['canpostpolls'] != 0)
 
@@ -159,7 +159,7 @@ FILE:   showthread.php
 *******************************************************
 
 
-FIND (line ~1100):
+FIND:
 -------------------------------------------------------
 if($mybb->user['signature'])
 
